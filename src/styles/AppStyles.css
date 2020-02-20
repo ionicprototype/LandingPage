@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+  background-color: rgba(60,255,60, 0.3);
+  min-height: 100vh;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
