@@ -1,3 +1,11 @@
 .Navbar {
   background-color: rgba(0,180,0, 0.3);
+  flex: 0.5 0.5 5%;
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 768px) {
+  .Navbar {
+    display: none;
+  }
 }

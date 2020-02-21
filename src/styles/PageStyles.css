@@ -1,3 +1,26 @@
 .Page {
   background-color: rgba(255,0,255,0.3);
+  flex: 3 3 90%;
+}
+
+.Page-title {
+  background-color: aliceblue;
+  height: 10%;
+  text-align: start;
+}
+
+.Page-title h1 {
+  padding: 1.5rem;
+  margin: 0;
+}
+
+.Page-body {
+  padding: 1rem;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .Page-title {
+    text-align: center;
+  }
 }

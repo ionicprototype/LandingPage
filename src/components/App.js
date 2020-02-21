@@ -12,8 +12,11 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <SideBar />
-      <Page />
+      <div style={{ height: "80%", flex: "9 9 90%", display: "flex", flexFlow: "row wrap"}}>
+        <SideBar />
+        <Page />
+      </div>
+      
       <Footer />
     </div>
   );

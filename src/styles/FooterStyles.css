@@ -1,3 +1,11 @@
 .Footer {
   background-color: rgba(0,0,255, 0.15);
+  flex: 0.5 0.5 5%;
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 768px) {
+  .Footer {
+    display: none;
+  }
 }

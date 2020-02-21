@@ -7,9 +7,9 @@ function Page() {
   return (
     <div className="Page">
       <div className="Page-title">
-        <p>Insert Title Here</p>
+        <h1>Insert Title Here</h1>
       </div>
-      <div className="Page-Body">
+      <div className="Page-body">
         <p>Page Body here</p>
       </div>
     </div>
