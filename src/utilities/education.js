@@ -14,15 +14,14 @@ const formalEducationList = [
 ];
 
 const informalEducationList = [
-  {
-    courseTitle: "Javascript: Understanding the Weird Parts",
-  },
-  {
-    courseTitle: "The Modern React Bootcamp"
-  },
-  {
-    courseTitle: "The Web Developer Bootcamp"
-  }
+  "JS: Understanding the Weird Parts",
+  "The Modern React Bootcamp",
+  "The Web Developer Bootcamp"
 ];
 
-export default { formalEducation, informalEducationList };
+const educationList = [
+  formalEducationList,
+  informalEducationList
+];
+
+export default educationList;

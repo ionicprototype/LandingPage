@@ -1,7 +1,26 @@
 .SideBar {
   background-color: rgba(255,0,0, 0.15);
   flex: 1 1 10%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
 }
+
+.SideBar-Link {
+  color: black;
+  text-decoration: none;
+  text-align: center;
+}
+
+.fa-mug-hot {
+  transition: color 1s ease;
+  font-size: 1.5em;
+}
+
+.fa-mug-hot:hover {
+  color: green;
+}
+
 
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 767px) {

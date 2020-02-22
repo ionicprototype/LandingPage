@@ -1,106 +1,106 @@
 const skillList = [
   {
-    skillName: "HTML",
+    type: "HTML",
     skills: [
       {
-        skillName: "HTML",
-        skillURL: "../images/skill.icons/html5_icon.png"
+        name: "HTML",
+        URL: "../images/skill.icons/html5_icon.png"
       },
       {
-        skillName: "ejs",
-        skillURL: "../images/skill.icons/ejs_icon.png"
+        name: "ejs",
+        URL: "../images/skill.icons/ejs_icon.png"
       },
       {
-        skillName: "pug",
-        skillURL: "../images/skill.icons/pug_icon.png"
+        name: "pug",
+        URL: "../images/skill.icons/pug_icon.png"
       }      
     ]
   },
   {
-    skillName: "Styling",
+    type: "Styling",
     skills: [
       {
-        skillName: "CSS3",
-        skillURL: "../images/skill.icons/css3_icon.png"
+        name: "CSS3",
+        URL: "../images/skill.icons/css3_icon.png"
       },
       {
-        skillName: "SASS",
-        skillURL: "../images/skill.icons/sass_icon.png"
+        name: "SASS",
+        URL: "../images/skill.icons/sass_icon.png"
       },
       {
-        skillName: "Material UI",
-        skillURL: "../images/skill.icons/material_ui.png"
+        name: "Material UI",
+        URL: "../images/skill.icons/material_ui.png"
       },
       {
-        skillName: "Bootstrap",
-        skillURL: "../images/skill.icons/bootstrap_icon.png"
+        name: "Bootstrap",
+        URL: "../images/skill.icons/bootstrap_icon.png"
       },
       {
-        skillName: "Less",
-        skillURL: "../images/skill.icons/less_icon.png"
+        name: "Less",
+        URL: "../images/skill.icons/less_icon.png"
       },
       {
-        skillName: "Semantic",
-        skillURL: "../images/skill.icons/semantic_icon.png"
+        name: "Semantic",
+        URL: "../images/skill.icons/semantic_icon.png"
       }       
     ]
   },
   {
-    skillName: "Javascript",
+    type: "Javascript",
     skills: [
       {
-        skillName: "Javascript",
-        skillURL: "../images/skill.icons/javascript_icon.png"
+        name: "Javascript",
+        URL: "../images/skill.icons/javascript_icon.png"
       },
       {
-        skillName: "jQuery",
-        skillURL: "../images/skill.icons/jQuery_icon.png"
+        name: "jQuery",
+        URL: "../images/skill.icons/jQuery_icon.png"
       },
       {
-        skillName: "React.js",
-        skillURL: "../images/skill.icons/react_icon.png"
+        name: "React.js",
+        URL: "../images/skill.icons/react_icon.png"
       },
       {
-        skillName: "Vue.js",
-        skillURL: "../images/skill.icons/vue_icon.png"
+        name: "Vue.js",
+        URL: "../images/skill.icons/vue_icon.png"
       }       
     ]
   },
   {
-    skillName: "Back-End",
+    type: "Back-End",
     skills: [
       {
-        skillName: "Node.js",
-        skillURL: "../images/skill.icons/node_icon.png"
+        name: "Node.js",
+        URL: "../images/skill.icons/node_icon.png"
       },
       {
-        skillName: "Express",
-        skillURL: "../images/skill.icons/express_icon.png"
+        name: "Express",
+        URL: "../images/skill.icons/express_icon.png"
       },
       {
-        skillName: "MongoDB",
-        skillURL: "../images/skill.icons/mongoDB.png"
+        name: "MongoDB",
+        URL: "../images/skill.icons/mongoDB.png"
       },
       {
-        skillName: "Git",
-        skillURL: "../images/skill.icons/git_icon.png"
+        name: "Git",
+        URL: "../images/skill.icons/git_icon.png"
       }       
     ]
   },
   {
-    skillName: "Other",
+    type: "Other",
     skills: [
       {
-        skillName: "Figma",
-        skillURL: "../images/skill.icons/figma_icon.png"
+        name: "Figma",
+        URL: "../images/skill.icons/figma_icon.png"
       },
       {
-        skillName: "GitHub",
-        skillURL: "../images/skill.icons/github_icon.png"
+        name: "GitHub",
+        URL: "../images/skill.icons/github_icon.png"
       },
       {
-        skillName: "Heroku",
-        skillURL: "../images/skill.icons/heroku_icon.png"
+        name: "Heroku",
+        URL: "../images/skill.icons/heroku_icon.png"
       }       
     ]
   },
