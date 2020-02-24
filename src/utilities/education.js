@@ -1,4 +1,4 @@
-const formalEducationList = [
+const educationList = [
   {
     institution: "Texas Lutheran University",
     degree: "B.S. (Chemistry)",
@@ -11,17 +11,6 @@ const formalEducationList = [
     startDate: "Aug 2006",
     endDate: "May 2009",
   }
-];
-
-const informalEducationList = [
-  "JS: Understanding the Weird Parts",
-  "The Modern React Bootcamp",
-  "The Web Developer Bootcamp"
-];
-
-const educationList = [
-  formalEducationList,
-  informalEducationList
 ];
 
 export default educationList;
