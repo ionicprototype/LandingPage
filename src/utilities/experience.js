@@ -4,7 +4,7 @@ const experienceList = [
     title: "Chemist",
     startDate: "Jan 2015",
     endDate: "Aug 2018",
-    description: [
+    descriptions: [
       "Successfully developed and validated new products prior to scale up",
       "Operated and maintained: FTIR, GC-FID, GC-MS, GPC, LC-MS, ICP, autoclaves, and high-vacuum pumps",
       "Developed and validated methods for LC-MS and ICP",
@@ -16,7 +16,7 @@ const experienceList = [
     title: "QC Chemist I",
     startDate: "Apr 2013",
     endDate: "Dec 2015",
-    description: [
+    descriptions: [
       "Analyzed production samples and determined proper course of action ",
       "Clearly communicated production issues with manager and supply-chain staff",
       "Recorded data in SAP for sample results and purchase requests in real-time ",
@@ -30,7 +30,7 @@ const experienceList = [
     title: "Scientist I",
     startDate: "July 2011",
     endDate: "July 2012",
-    description: [
+    descriptions: [
       "Communicated daily with laboratory technicians to ensure that sample extracts were delivered consistently ahead of schedule to the instrumentation lab",
       "Utilized proper communication to reduce sample throughput from 10 to 3 days",
       "Wrote and revised SOPs to improve clarity",
@@ -43,7 +43,7 @@ const experienceList = [
     title: "Chemist III",
     startDate: "May 2010",
     endDate: "June 2011",
-    description: [
+    descriptions: [
       "Extracted and purified samples from various environmental matrices using standard solid-liquid and liquid-liquid extraction following EPA methodology",
       "Supported project management and consulted with clients as needed to provide technical support and assurance; included discussion with private agencies and EPA",
       "Packaged and shipped client-sampling material packages for field usage",

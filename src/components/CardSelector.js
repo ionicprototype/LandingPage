@@ -11,42 +11,42 @@ import '../styles/CardSelectorStyles.css';
 
 
 function CardSelector(props) {
-  const { cardView, pageInfo, pageTitle } = props;
+  const { cardView, pageInfo } = props;
   
   const setCardView = (cardView) => {
     if( cardView === "education") {
       return pageInfo.map(info => (
-        <div className="Card">
+        <div className="Card" style={{height: "20%"}}>
           <div className="Card-Container">
-            <div className="Card-Title">{pageTitle}</div>
-            <CardEducation />
+            <div className="Card-Title">{info.institution}</div>
+            <CardEducation cardInfo={info} />
           </div>
         </div>
       ));
     } else if(cardView === "experience") {
       return pageInfo.map(info => (
-        <div className="Card">
+        <div className="Card" style={{height: "35%"}}>
           <div className="Card-Container">
-            <div className="Card-Title">{pageTitle}</div>
-            <CardExperience />
+            <div className="Card-Title">{info.title}</div>
+            <CardExperience cardInfo={info} />
           </div>
         </div>
       ));
     } else if(cardView === "projects") {
       return pageInfo.map(info => (
-        <div className="Card">
+        <div className="Card" style={{height: "45vh"}}>
           <div className="Card-Container">
-            <div className="Card-Title">{pageTitle}</div>
-            <CardProjects />
+            <div className="Card-Title">{info.projectName}</div>
+            <CardProjects cardInfo={info} />
           </div>
         </div>
       ));
     } else if(cardView === "skills") {
       return pageInfo.map(info => (
-        <div className="Card">
+        <div className="Card" style={{height: "25%"}}>
           <div className="Card-Container">
-            <div className="Card-Title">{pageTitle}</div>
-            <CardSkills />
+            <div className="Card-Title">{info.type}</div>
+            <CardSkills cardInfo={info} />
           </div>
         </div>
       ));
@@ -54,9 +54,9 @@ function CardSelector(props) {
   }
   
   return (
-    <span className="CardSelector">
+    <div className="CardSelector">
       {setCardView(cardView)}
-    </span>
+    </div>
   )
 }
 

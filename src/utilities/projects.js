@@ -7,31 +7,31 @@ const projectList = [
     projectTools: [
       {
         toolName: "ejs",
-        toolIcon: "../images/skill.icons/ejs_icon.png"
+        toolIcon: "./images/icons/ejs_icon.png"
       },
       {
         toolName: "Bootstrap",
-        toolIcon: "../images/skill.icons/bootstrap_icon.png"
+        toolIcon: "./images/icons/bootstrap_icon.png"
       },
       {
         toolName: "jQuery",
-        toolIcon: "../images/skill.icons/jQuery_icon.png"
+        toolIcon: "./images/icons/jQuery_icon.png"
       },
       {
         toolName: "Node",
-        toolIcon: "../images/skill.icons/node_icon.png"
+        toolIcon: "./images/icons/node_icon.png"
       },
       {
         toolName: "Express",
-        toolIcon: "../images/skill.icons/express_icon.png"
+        toolIcon: "./images/icons/express_icon.png"
       },
       {
         toolName: "mongoDB",
-        toolIcon: "../images/skill.icons/mongoDB.png"
+        toolIcon: "./images/icons/mongoDB.png"
       },
       {
         toolName: "Heroku",
-        toolIcon: "../images/skill.icons/heroku_icon.png"
+        toolIcon: "./images/icons/heroku_icon.png"
       }
     ]
   },
@@ -43,7 +43,7 @@ const projectList = [
     projectTools: [
       {
         toolName: "React.js",
-        toolIcon: "../images/skill.icons/react_icon.png"
+        toolIcon: "./images/icons/react_icon.png"
       }
     ]
   },
@@ -54,7 +54,7 @@ const projectList = [
     projectTools: [
       {
         toolName: "React.js",
-        toolIcon: "../images/skill.icons/react_icon.png"
+        toolIcon: "./images/icons/react_icon.png"
       }
     ]
   }

@@ -1,6 +1,7 @@
 .SideBar {
   background-color: rgba(255,0,0, 0.15);
   flex: 1 1 10%;
+  height: 100vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
@@ -20,7 +21,6 @@
 .fa-mug-hot:hover {
   color: green;
 }
-
 
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 767px) {
