@@ -7,6 +7,7 @@ function CardExperience(props) {
   return (
     <div className="CardExperience">
       <div className="CardExperience-Company">{cardInfo.company}</div>
+      <hr />
       <div className="CardExperience-Date">
         {`${cardInfo.startDate} - ${cardInfo.endDate}`}
       </div>

@@ -3,11 +3,11 @@ import React, { useState } from 'react'
 
 function CardProjects(props) {
   const { cardInfo } = props;
-  const [ flip, setFlip ] = useState(false);
+  const [ flip, setFlip ] = useState("front");
 
   const flipCard = () => {
     let flipValue = flip;
-    if( flipValue === true) {
+    if( flipValue === "front") {
       flipValue = "back"
     } else {
       flipValue = "front"
@@ -38,7 +38,9 @@ function CardProjects(props) {
       <div className="CardProjects-Footer">
         <a href={cardInfo.projectLink}><i className="CardProjects-FooterIcon fas fa-link"/></a>
         <a href={cardInfo.gitHubLink}><i className="CardProjects-FooterIcon fab fa-github-alt"/></a>
-        <i className="CardProjects-FooterIcon fas fa-sync-alt" onClick={flipCard}/>
+        <a href="#bottom" onClick={flipCard}>
+          <i className="CardProjects-FooterIcon fas fa-sync-alt" />
+        </a>
       </div>
     </div>
   )

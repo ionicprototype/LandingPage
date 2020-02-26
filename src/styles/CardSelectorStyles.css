@@ -1,7 +1,14 @@
 .CardSelector {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  height: 100%;
   width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 768px) {
+  .CardSelector {
+    grid-template-columns: 1fr;
+    margin: auto 1rem;
+  }
 }
