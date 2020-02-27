@@ -1,18 +1,18 @@
 // Dependencies
 import React from 'react';
 // Components
-import Footer from './Footer';
-import Navbar from './Navbar';
 import Routes from './Routes';
 // CSS
 import '../styles/AppStyles.css';
 
-function App() {
+function App(props) {
+  const linkNames = [
+    "home", "experience", "projects", "skills"
+  ];
+
   return (
     <div className="App">
-      <Navbar />
-      <Routes />
-      <Footer />
+      <Routes linkNames={linkNames} />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 // Dependencies
 import React, { useState } from 'react'
+import { v4 as uuidv4 } from 'uuid';
 
 function CardProjects(props) {
   const { cardInfo } = props;
@@ -23,7 +24,7 @@ function CardProjects(props) {
           <div>Made With:</div>
             <div className="CardProjects-MadeWith">
             {cardInfo.projectTools.map(tool => (
-              <img className="CardProjects-MadeWithIcon" src={tool.toolIcon} alt={tool.toolName} />
+              <img className="CardProjects-MadeWithIcon" key={uuidv4()} src={tool.toolIcon} alt={tool.toolName} />
             ))}
             </div>
           </div>
@@ -38,9 +39,9 @@ function CardProjects(props) {
       <div className="CardProjects-Footer">
         <a href={cardInfo.projectLink}><i className="CardProjects-FooterIcon fas fa-link"/></a>
         <a href={cardInfo.gitHubLink}><i className="CardProjects-FooterIcon fab fa-github-alt"/></a>
-        <a href="#bottom" onClick={flipCard}>
+        <button style={{ background: "transparent", border: "none" }} onClick={flipCard}>
           <i className="CardProjects-FooterIcon fas fa-sync-alt" />
-        </a>
+        </button>
       </div>
     </div>
   )

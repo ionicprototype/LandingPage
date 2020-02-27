@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  background-color: rgba(60,255,60, 0.3);
+  background-color: rgba(118,183,148,1);
   min-height: 100vh;
 }
 

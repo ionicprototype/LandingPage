@@ -5,8 +5,7 @@ import projectList from '../utilities/projects';
 import skillList from '../utilities/skills';
 
 const combinedLists = [
-  { type: "education", list: educationList},
-  { type: "experience", list: experienceList},
+  { type: "experience", list: [ experienceList, educationList ] },
   { type: "projects", list: projectList},
   { type: "skills", list: skillList}
 ];

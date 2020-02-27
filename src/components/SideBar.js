@@ -5,10 +5,8 @@ import { Link } from 'react-router-dom';
 import '../styles/SideBarStyles.css';
 
 
-function SideBar() {
-  const linkNames = [
-    "home", "about", "experience", "projects", "skills", "education", "contact"
-  ];
+function SideBar(props) {
+  const { linkNames } = props;
 
   return (
     <div className="SideBar">

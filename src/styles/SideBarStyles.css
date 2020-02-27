@@ -1,8 +1,9 @@
 .SideBar {
   background-color: rgba(255,0,0, 0.15);
+  display: none;
   flex: 1 1 10%;
   height: 100vh;
-  display: flex;
+  /* display: flex; */
   flex-flow: column nowrap;
   justify-content: space-evenly;
 }

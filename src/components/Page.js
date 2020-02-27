@@ -11,7 +11,7 @@ function Page(props) {
   const pageTitle = pageName.charAt(0).toUpperCase() + pageName.slice(1);
 
   const pageRender = (pageName) => {
-    if(pageName === "education" || pageName === "experience" || pageName === "projects" || pageName === "skills") {
+    if(pageName === "experience" || pageName === "projects" || pageName === "skills") {
       return (<CardSelector pageTitle={pageTitle} cardView={pageInfo.type} pageInfo={pageInfo.list} />);
     } else {
       return (<ContentSelector />);

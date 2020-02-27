@@ -15,7 +15,7 @@
   position: absolute;
   top: -5%;
   left: 5%;
-  font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(18px + (24 - 18) * ((100vw - 300px) / (1600 - 300)));
   z-index: 20;
   text-transform: uppercase;
   color: white;
@@ -54,6 +54,7 @@
 .CardExperience-Description li {
   font-size: 16px;
   margin-top: 0.5rem;
+  list-style: none;
 }
 
 /* CardSkills - Styling */

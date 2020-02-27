@@ -1,35 +1,50 @@
 // Dependencies
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Redirect, Route, Switch } from 'react-router-dom';
 // Components
+import Navbar from './Navbar';
 import Page from './Page';
 import SideBar from './SideBar';
+import Footer from './Footer';
 // Utilities
 import combinedLists from '../utilities/combinedLists';
 
 function Routes(props) {
+  const { linkNames } = props;
+  const [ activeLink, setActiveLink ] = useState(0);
+  
+  const changeActive = index => {
+    setActiveLink(index);
+  }
   // Loops through requested URL and Utilities to determine what was requested
   const getPage = props => {
+    let tempIndex  = 0;
     let name = props.match.params.name;
     let currentPage = combinedLists.find(
       page => page.type.toLowerCase() === name.toLowerCase()
     );
+    /** If queried name exists (currentPage), find the index in the list link to apply the ActiveLink class
+     *  Else the link does not exist and should be set to 'home' or 0
+     */
+    tempIndex = currentPage ? linkNames.findIndex(item => item === name) : 0;
+    setActiveLink(tempIndex);
+
     if(currentPage) {
       return (<Page {...props} pageName={name} pageInfo={currentPage} />);
-    } else if(name === "about" || name === "contact") { 
-      return (<Page {...props} pageName={name} />);
     } else {
-      return (<Page {...props} pageName="home" />);
+      return (<Redirect to="/home" />);
     }
   }
 
   return (
-    <div style={{ height: "80%", flex: "9 9 90%", display: "flex", flexFlow: "row wrap"}}>
-      <SideBar />
+    <div style={{ height: "80%"}}>
+      <Navbar activeLink={activeLink} changeActive={changeActive} linkNames={linkNames} />
+      <SideBar linkNames={linkNames} />
       <Switch>
-        <Route exact path="/home" render={() => <Page {...props} pageName="home" />} />
+        <Route exact path="/home" render={routeProps => <Page {...props} pageName="home" />} />
         <Route exact path="/:name" component={getPage} />
       </Switch>
+      <Footer />
     </div>
   )
 };
