@@ -3,8 +3,10 @@ import React from 'react';
 // Components
 import CardSelector from './CardSelector';
 import ContentSelector from './ContentSelector';
+import Footer from './Footer';
 // CSS
 import '../styles/PageStyles.css';
+import '../styles/FooterStyles.css';
 
 function Page(props) {
   const { pageName, pageInfo } = props;
@@ -19,14 +21,17 @@ function Page(props) {
   }
 
   return (
-    <div className="Page">
-      <div className="Page-title">
-        <h1>{pageTitle}</h1>
+    <>
+      <div className="Page">
+        <div className="Page-title">
+          <h1>{pageTitle}</h1>
+        </div>
+        <div className="Page-body">
+          {pageRender(pageName)}
+        </div>
       </div>
-      <div className="Page-body">
-        {pageRender(pageName)}
-      </div>
-    </div>
+      {pageName === "home" ? <Footer /> : false}
+    </>
   )
 }
 

@@ -1,6 +1,6 @@
 .Card {
   border-radius: 20px;
-  background-color: rgba(0,75,75,0.4);
+  background-color: rgba(0,75,75,0.5);
   box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.4);
   position: relative;
   padding: 0.5rem;
@@ -15,10 +15,11 @@
   position: absolute;
   top: -5%;
   left: 5%;
+  width: auto;
   font-size: calc(18px + (24 - 18) * ((100vw - 300px) / (1600 - 300)));
-  z-index: 20;
+  z-index: 50;
   text-transform: uppercase;
-  color: white;
+  color: aliceblue;
   text-shadow: -1px -1px 1px #aaa,
     0px 4px 1px rgba(0,0,0,0.5),
     4px 4px 5px rgba(0,0,0,0.7),
@@ -30,6 +31,8 @@
   padding: 3rem 1rem;
   font-size: 1.5rem;
   text-align: center;
+  justify-self: center;
+  align-self: center;
 }
 .CardEducation-Degree {
   margin: 0.5rem auto;
@@ -129,5 +132,5 @@
 
 .CardProjects-FooterIcon {
   font-size: max(3rem);
-  color: whitesmoke;
+  color: aliceblue;
 }

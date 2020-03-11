@@ -1,9 +1,13 @@
 .Navbar {
   /* background-color: rgba(205,217,167, 1); */
-  height: 8vh;
+  background-color: rgba(0,75,75,0.5);
+  position: sticky;
+  top: 0;
+  height: 7vh;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
+  font-size: calc(6px + 14 * (100vw - 300px) / 1300);
 }
 
 /* 118,183,148 (dark green)
@@ -23,7 +27,7 @@
 }
 
 .Navbar-ActiveLink {
-  font-size: 2rem;
+  font-size: 2.5rem;
   transition: ease-in-out 500ms;
 }
 
@@ -37,9 +41,7 @@
   transition: ease-in-out 500ms;
 }
 
-/* Large devices (desktops, 992px and up) */
-@media (max-width: 768px) {
-  .Navbar {
-
-  }
+hr {
+  margin-block-start: 0;
+  margin-block-end: 0;
 }

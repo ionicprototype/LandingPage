@@ -5,7 +5,6 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import Navbar from './Navbar';
 import Page from './Page';
 import SideBar from './SideBar';
-import Footer from './Footer';
 // Utilities
 import combinedLists from '../utilities/combinedLists';
 
@@ -37,15 +36,15 @@ function Routes(props) {
   }
 
   return (
-    <div style={{ height: "80%"}}>
+    <>
       <Navbar activeLink={activeLink} changeActive={changeActive} linkNames={linkNames} />
       <SideBar linkNames={linkNames} />
       <Switch>
         <Route exact path="/home" render={routeProps => <Page {...props} pageName="home" />} />
         <Route exact path="/:name" component={getPage} />
+        <Redirect to="/home" />
       </Switch>
-      <Footer />
-    </div>
+    </>
   )
 };
 

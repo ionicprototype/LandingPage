@@ -1,14 +1,13 @@
 .Page {
   background-color: rgba(118,183,148,1);
-  display: inline-block;
-  width: 100vw;
-  height: 92vh;
-  overflow: scroll;
+  display: block;
+  width: 100%;
+  height: 93vh;
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
+  /* width: 0px;
+  background: transparent; */
 }
 
 .Page-title {
@@ -18,7 +17,7 @@
   display: none;
 }
 
-.Page-title h1 {
+.Page-title {
   padding: 1.5rem;
   margin: 0;
 }
@@ -26,7 +25,6 @@
 .Page-body {
   width: 100%;
   height: 100%;
-  padding: 2rem;
   color: aliceblue;
 }
 
