@@ -9,7 +9,7 @@ function Footer() {
       {/* <h1 className="Footer-ContactHeader">Looking to collaborate? Curious about what I can do for you? Need to be in touch?</h1> */}
       <div className="Footer-Contact">
         <div className="contactCard">
-          <a href="/home" className="contactIcon"><i className="fas fa-mail-bulk" /></a>        
+          <a href="mailto:eric.a.bauch@gmail.com" className="contactIcon"><i className="fas fa-mail-bulk" /></a>        
         </div>
         <div className="contactCard">
           <a href="https://www.github.com/ionicprototype" className="contactIcon"><i className="fab fa-github-alt" /></a>        

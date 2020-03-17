@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import '../styles/NavbarStyles.css';
 
 function Navbar(props) {
-  const { activeLink, linkNames, changeActive } = props;
+  const { activeLink, linkNames, changeActive, toggleSidebar } = props;
   
   const handleClick = idx => {
     changeActive(idx);
@@ -13,16 +13,22 @@ function Navbar(props) {
 
   return (
     <nav className="Navbar">
-      {linkNames.map( (linkTag, index) => (
-        <Link className={`Navbar-Link ${activeLink === index ? 'Navbar-ActiveLink' : 'Navbar-InactiveLink'}`}
+      <div className="Navbar-ControlBox">
+        {/* `${toggleNavbar ? "toggleNavbar" : "toggleMenu"} Navbar-ControlButton` */}
+        <button className="toggleNavbar Navbar-ControlButton" onClick={toggleSidebar}>{ false ? "MENU" : <i className="fas fa-bars"></i>}</button>
+      </div>
+      <div className="Navbar-LinkContainer">
+        {linkNames.map( (linkTag, index) => (
+          <Link className={`Navbar-Link ${activeLink === index ? 'Navbar-ActiveLink' : 'Navbar-InactiveLink'}`}
           to={linkTag}
           key={linkTag}
           onClick={() => handleClick(index)}
-        >
-          {linkTag.toUpperCase()}
-          <hr className={`${activeLink === index ? 'Navbar-ActiveBlock' : 'Navbar-InactiveBlock'}`} />
-        </Link>
-      ))}
+          >
+            {linkTag.toUpperCase()}
+            <hr className={`${activeLink === index ? 'Navbar-ActiveBlock' : 'Navbar-InactiveBlock'}`} />
+          </Link>
+        ))}
+      </div>
     </nav>
   )
 }

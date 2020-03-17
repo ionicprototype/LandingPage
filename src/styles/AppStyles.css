@@ -10,3 +10,16 @@ p {
   margin-block-start: 0;
   margin-block-end: 0;
 }
+
+/* 
+DARK GREEN:  rgb(9,74,58) 094A3A
+LIGHT GREEN: rgb(59,129,111) 3B816F
+DARK COMPLEMENT: rgb(114,76,14) 72330E
+LIGHT COMPLEMENT: rgb(198,157,91) C6835B
+
+Colorblind Mode:
+DARK GREEN: 3B3B3B rgba(56, 56, 56, 1)
+LIGHT GREEN: 707070 rgba(112, 112, 112, 1)
+DARK COMPLEMENT: 4F4F4F rgba(79, 79, 79, 1)
+LIGHT COMPLEMENT: A0A0A0 rgba(160,160,160,1)
+ */ 

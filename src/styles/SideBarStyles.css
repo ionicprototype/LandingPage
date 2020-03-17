@@ -1,31 +1,108 @@
 .SideBar {
-  background-color: rgba(255,0,0, 0.15);
-  display: none;
-  flex: 1 1 10%;
+  position: absolute;
+  top: 0%;
   height: 100vh;
-  /* display: flex; */
+  width: 100vw;
+  z-index: 100;
+  transition: ease-in-out 500ms;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.SideBar-Container {
+  flex: 1 1 25vw;
+  position: relative;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  background-color: rgba(118,183,148,.8);
+  z-index: 100;
+  display: flex;
   flex-flow: column nowrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.SideBar-Link {
-  color: black;
+.SideBar-Clickable {
+  position: relative;
+  flex: 1 1 75vw;
+}
+
+.SideBar-BG {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(198,157,91,0.7);
+  box-shadow: inset 0 0 15px 2px rgba(114,76,14,1);
+  z-index: -1;
+}
+
+.SideBar-Link{
+  color: aliceblue;
   text-decoration: none;
+  width: 50%;
+  height: 5vh;
   text-align: center;
+  font-size: 2em;
+  z-index: 100;
 }
 
-.fa-mug-hot {
-  transition: color 1s ease;
-  font-size: 1.5em;
+.Sidebar-Close {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 2.5vw;
+  height: 2.5vw;
+  z-index: 100;
+  border: none;
+  background: transparent;
+  color: aliceblue;
+  font-size: 2rem;
 }
 
-.fa-mug-hot:hover {
-  color: green;
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+.switch::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius:50%;
+  background-color: white;
+  top: 1px;
+  left: 1px;
+  transition: all 0.5s;
 }
 
-/* Medium devices (tablets, 768px and up) */
-@media (max-width: 767px) {
-  .SideBar {
-    display: none;
-  }
+.checkbox:checked + .switch::after {
+  left : 20px;
+}
+.checkbox:checked + .switch {
+  background-color: rgba(59, 129, 111, 1);
+}
+.checkbox {
+  display : none;
+}
+
+.optionsLabel {
+  font-size: 20px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+label {
+  color: aliceblue;
+  width: 50%;
+  height: 5vh;
+  text-align: center;
+  font-size: 2em;
 }

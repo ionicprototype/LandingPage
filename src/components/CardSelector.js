@@ -56,7 +56,7 @@ function CardSelector(props) {
       ));
     }
   }
-  
+
   return (
     <div className="CardSelector">
         {setCardView(cardView)}
