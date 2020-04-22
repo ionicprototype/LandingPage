@@ -4,6 +4,7 @@ import React from 'react';
 import Routes from './Routes';
 // CSS
 import '../styles/AppStyles.css';
+import '../styles/ColorStyles.css';
 
 function App(props) {
   const linkNames = [

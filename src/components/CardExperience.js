@@ -10,11 +10,10 @@ function CardExperience(props) {
   
   return (
     <div className="CardExperience">
-      <div className="CardExperience-Company">{cardInfo.company}</div>
-      <div className="CardExperience-Date">
-        {`${cardInfo.startDate} - ${cardInfo.endDate}`}
+      <div className="CardExperience-Company">
+        <span>{cardInfo.company}</span>
+        <span>{`${cardInfo.startDate} - ${cardInfo.endDate}`}</span>
       </div>
-      <hr style={{ width: "50%" }} />
       <ul className="CardExperience-Description">
         {cardInfo.descriptions.map(description => (
           <li key={uuidv4()}>{description}</li>

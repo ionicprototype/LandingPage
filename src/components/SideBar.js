@@ -1,51 +1,43 @@
 // Dependencies
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { v4 as uuidv4 } from 'uuid';
 // CSS
 import '../styles/SideBarStyles.css';
 
 
 function SideBar(props) {
-  const { combinedOptionsMenu, linkNames, optionsView, sideBarView, toggleSidebar, toggleOptionsMenu } = props;
+  const { darkTheme, linkNames, screenSize, sideBarView, toggleSidebar, setDarkTheme } = props;
 
   // @DESC constructs links for Sidebar
-  const linkView = linkNames.map(linkTag => (
+  const linkView = linkNames.map(name => (
     <Link 
-      className="SideBar-Link" 
-      to={linkTag}
-      key={linkTag}
+      className={`SideBar-Link ${darkTheme && 'dark'}`} 
+      to={name}
+      key={name}
       onClick={toggleSidebar}
     >
-      {linkTag.toUpperCase()}
+      {name.toUpperCase()}
     </Link>
   ));
 
-  // @DESC constructs toggle switch menu for Sidebar
-  const menuView = combinedOptionsMenu.map(option => (
-    <div className="SideBar-toggleSwitch" key={uuidv4()} >
-      <label className="optionsLabel" htmlFor={option.id}>{option.name}</label>
-      <input type="checkbox" className="checkbox" id={option.id} checked={option.controlValue} onChange={option.controlSwitch} />  
-      <label className="switch" htmlFor={option.id} />
-    </div>
-  ));
-
-  // @DESC determines which view is requested (site links or options) to display in the Sidebar
-  const renderView = optionsView ? menuView : linkView;
+  const viewWidth = (screenSize <= 992 ? 100 : 50);
 
   return (
     <div className="SideBar" style={{ left: `${sideBarView ? "0%" : "-100%"}`}}>
-      <div className="SideBar-Container">
-        <button className="Sidebar-Close" onClick={toggleSidebar}>X</button>
-        <div className="SideBar-toggleSwitch">
-          <label className="optionsLabel" htmlFor="toggle">Options</label>
-          <input type="checkbox" className="checkbox" id="toggle" checked={optionsView} onChange={toggleOptionsMenu} />  
-          <label className="switch" htmlFor="toggle" />
+      <div className={`SideBar-Docked ${darkTheme && 'dark'}`} style={{ flex: `1 1 ${viewWidth}vw`}}>
+        <div className="SideBar-Command">
+          <button className="Sidebar-Close" onClick={toggleSidebar}><i class={`fas fa-times-circle ${darkTheme && 'dark'}`}></i></button>
+          <div className={`SideBar-Settings SideBar-toggleSwitch ${darkTheme && 'dark'}`}>
+            <input type="checkbox" className={`toggleSwitch ${darkTheme && 'dark'}`} id="toggle" checked={darkTheme} onChange={setDarkTheme} />  
+            <label className={`switch ${darkTheme && 'dark'}`} htmlFor="toggle" />
+          </div>
         </div>
-        {renderView}
-        <div className="SideBar-BG"></div>
-      </div>
-      <div className="SideBar-Clickable" onClick={toggleSidebar}></div>
+        <div className="SideBar-Links">
+          {linkView}
+        </div>
+        <div className={`SideBar-BG ${darkTheme && 'dark'}`}></div>
+      </div>      
+      <div className="SideBar-Scrim" onClick={toggleSidebar} style={{ flex: `1 1 ${100 - viewWidth}vw`}}></div>
     </div>
   );
 }

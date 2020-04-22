@@ -1,0 +1,176 @@
+/**
+* CSS that controls color/dark mode
+*/
+
+/*  
+ * General CSS declarations for elements
+ */
+.headingText {
+  color: #393939;
+}
+.headingText.dark {
+  color: #393939;
+}
+.bodyText {
+  color: #393939;
+}
+.bodyText.dark {
+  color: #393939;
+}
+.Page {
+  background-color: rgba(118,183,148,1);
+}
+.Page.dark {
+  background-color: #121212;
+}
+/*  
+ * CSS for Navbar elements
+ */
+ .Navbar {
+  background-color: #3B8170;
+ }
+ .Navbar.dark {
+  background-color: #393939;
+ }
+.Navbar-Link {
+  color: #004B4B;
+}
+.Navbar-Link.dark {
+  color: #777777;
+}
+.Navbar-ActiveLink {
+  color: aliceblue;
+}
+.Navbar-ActiveLink.dark {
+  color: #BB86FC;
+}
+hr {
+  color: aliceblue;
+}
+hr.dark {
+  color: #BB86FC;
+}
+.fa-bars {
+  color: aliceblue;
+}
+.fa-bars.dark {
+  color: #BB86FC;
+}
+  /*  
+ * CSS for Card elements
+ */
+.Card {
+  background-color: rgb(59,129,112);
+  box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.4);
+}
+.Card.dark {
+  background-color: #393939;
+}
+
+.Card-Title {
+  z-index: 50;
+  color: aliceblue;
+  text-shadow: -1px -1px 1px #aaa,
+    0px 4px 1px rgba(0,0,0,0.5),
+    4px 4px 5px rgba(0,0,0,0.7),
+    0px 0px 7px rgba(0,0,0,0.4);
+}
+.Card-Title.dark {
+  color: #393939;
+  text-shadow: -1px -1px 1px #aaa,
+    0px 4px 1px rgba(255,255,255,0.5),
+    4px 4px 5px rgba(255,255,255,0.7),
+    0px 0px 7px rgba(255,255,255,0.4);
+}
+
+.CardProjects-FooterIcon {
+  color: aliceblue;
+}
+.CardProjects-FooterIcon.dark {
+  color: #393939;
+}
+
+/* 
+ * CSS for Sidebar elements
+ */
+.SideBar-Docked {
+  background-color: rgba(118,183,148,.8);
+  z-index: 100;
+}
+.SideBar-Docked.dark {
+  background-color: rgba(255,255,255,.8);
+}
+.SideBar-BG {
+  background-color: rgba(198,157,91,1);
+  box-shadow: inset 0 0 15px 2px rgba(114,76,14,1);
+  z-index: -1;
+}
+.SideBar-BG.dark {
+  background-color: #393939;
+  box-shadow: none;
+}
+.SideBar-Link {
+  z-index: 100;
+  color: #393939;
+}
+.SideBar-Link.dark {
+  color: aliceblue;
+}
+.fa-times-circle {
+  color: #393939;
+}
+.fa-times-circle.dark {
+  color: white;
+}
+.switch {
+  background-color: transparent;
+}
+.switch.dark {
+  background-color: transparent;
+}
+.switch::after {
+  background-color: white;
+}
+.switch.dark::after {
+  background-color: #393939;
+}
+.toggleSwitch:checked + .switch {
+  background-color: transparent;
+}
+.toggleSwitch.dark:checked + .switch.dark {
+  background-color: transparent;
+}
+.switchLabel {
+  color: #393939;
+}
+.switchLabel.dark {
+  color: aliceblue;
+}
+
+/*  
+ * CSS for Footer elements
+ */
+.Footer-Contact {
+  background: linear-gradient(0deg, transparent 0% 20%, #3B8170 20% 80%, transparent 80%);
+}
+.Footer-Contact.dark {
+  background: linear-gradient(0deg, transparent 0% 20%, #393939 20% 80%, transparent 80%);
+}
+.contactIcon {
+  background-color: #004B4B;
+  color: aliceblue;
+  border: 10px solid #76B794;
+}
+.contactIcon.dark {
+  background-color: #393939;
+  color: #BB86FC;
+  border: 10px solid #121212;
+}
+.contactIcon:hover {
+  color: #76B794;
+}
+.contactIcon.dark:hover {
+  color: aliceblue;
+}
+
+

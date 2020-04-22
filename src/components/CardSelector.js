@@ -12,14 +12,14 @@ import '../styles/CardSelectorStyles.css';
 
 
 function CardSelector(props) {
-  const { cardView, pageInfo } = props;
+  const { cardView, darkTheme, pageInfo } = props;
 
   const setCardView = (cardView) => {
      if(cardView === "experience") {
       return (
         <>
           {pageInfo[0].map(info => (
-          <div key={uuidv4()} className="Card" style={{ width: "90%", height: "80%" }}>
+          <div key={uuidv4()} className={`Card ${darkTheme && 'dark'}`} style={{ width: "90%", height: "80%" }}>
             <div className="Card-Container">
               <div className="Card-Title">{info.title}</div>
               <CardExperience cardInfo={info} />
@@ -27,7 +27,7 @@ function CardSelector(props) {
           </div>
           ))}
           {pageInfo[1].map(info => (
-          <div key={uuidv4()} className="Card" style={{ width: "90%", height: "80%" }}>
+          <div key={uuidv4()} className={`Card ${darkTheme && 'dark'}`} style={{ width: "90%", height: "80%" }}>
             <div className="Card-Container">
               <div className="Card-Title">{info.institution}</div>
               <CardEducation cardInfo={info} />
@@ -38,7 +38,7 @@ function CardSelector(props) {
         );
     } else if(cardView === "projects") {
       return pageInfo.map(info => (
-        <div key={uuidv4()} className="Card" style={{width: "80%", height: "80%" }}>
+        <div key={uuidv4()} className={`Card ${darkTheme && 'dark'}`} style={{width: "80%", height: "80%" }}>
           <div className="Card-Container">
             <div className="Card-Title">{info.projectName}</div>
             <CardProjects cardInfo={info} />
@@ -47,7 +47,7 @@ function CardSelector(props) {
       ));
     } else if(cardView === "skills") {
       return pageInfo.map(info => (
-        <div key={uuidv4()} className="Card" style={{ width: "80%", height: "75%" }}>
+        <div key={uuidv4()} className={`Card ${darkTheme && 'dark'}`} style={{ width: "80%", height: "75%" }}>
           <div className="Card-Container">
             <div className="Card-Title">{info.type}</div>
             <CardSkills cardInfo={info} />

@@ -5,29 +5,34 @@ import { Link } from 'react-router-dom';
 import '../styles/NavbarStyles.css';
 
 function Navbar(props) {
-  const { activeLink, linkNames, changeActive, toggleSidebar } = props;
+  const { activeLink, darkTheme, linkNames, screenSize, changeActive, toggleSidebar } = props;
   
   const handleClick = idx => {
     changeActive(idx);
   }
 
+  const desktopView = linkNames.map( (linkTag, index) => (
+    <Link className={`Navbar-Link ${darkTheme && 'dark'} ${activeLink === index ? `Navbar-ActiveLink ${darkTheme && 'dark'}` : `Navbar-InactiveLink ${darkTheme && 'dark'}`}`}
+    to={linkTag}
+    key={linkTag}
+    onClick={() => handleClick(index)}
+    >
+      {linkTag.toUpperCase()}
+      <hr className={`${activeLink === index ? `Navbar-ActiveBlock ${darkTheme && 'dark'}` : `Navbar-InactiveBlock ${darkTheme && 'dark'}`}`} />
+    </Link>
+  ));
+
+  const mobileView = <div className={`Navbar-Link Navbar-ActiveLink ${darkTheme && 'dark'}`}>{linkNames[activeLink]}</div>;
+  const viewMode = screenSize <= 576 ? mobileView : desktopView; 
+
   return (
-    <nav className="Navbar">
+    <nav className={`Navbar ${darkTheme && 'dark'}`}>
       <div className="Navbar-ControlBox">
         {/* `${toggleNavbar ? "toggleNavbar" : "toggleMenu"} Navbar-ControlButton` */}
-        <button className="toggleNavbar Navbar-ControlButton" onClick={toggleSidebar}>{ false ? "MENU" : <i className="fas fa-bars"></i>}</button>
+        <button className="toggleNavbar Navbar-ControlButton" onClick={toggleSidebar}>{ false ? "MENU" : <i className={`fas fa-bars ${darkTheme && 'dark'}`}></i>}</button>
       </div>
       <div className="Navbar-LinkContainer">
-        {linkNames.map( (linkTag, index) => (
-          <Link className={`Navbar-Link ${activeLink === index ? 'Navbar-ActiveLink' : 'Navbar-InactiveLink'}`}
-          to={linkTag}
-          key={linkTag}
-          onClick={() => handleClick(index)}
-          >
-            {linkTag.toUpperCase()}
-            <hr className={`${activeLink === index ? 'Navbar-ActiveBlock' : 'Navbar-InactiveBlock'}`} />
-          </Link>
-        ))}
+        {viewMode}
       </div>
     </nav>
   )

@@ -9,39 +9,32 @@ import '../styles/PageStyles.css';
 import '../styles/FooterStyles.css';
 
 function Page(props) {
-  const { pageName, pageInfo, sideBarView, toggleSidebar  } = props;
-  const pageTitle = pageName.charAt(0).toUpperCase() + pageName.slice(1);
+  const { darkTheme, pageName, pageInfo  } = props;
 
-  const pageRender = (pageName) => {
-    if(pageName === "experience" || pageName === "projects" || pageName === "skills") {
+
+  const pageRender = name => {
+    const pageTitle = name.charAt(0).toUpperCase() + name.slice(1);
+    if(name === "experience" || name === "projects" || name === "skills") {
       return (
-        <CardSelector 
+        <CardSelector
+          darkTheme={darkTheme} 
           pageTitle={pageTitle} 
           cardView={pageInfo.type} 
           pageInfo={pageInfo.list} 
-          sideBarView={sideBarView}
-          toggleSidebar={toggleSidebar}
         />);
     } else {
-      return (<ContentSelector />);
+      return <ContentSelector darkTheme={darkTheme} pageTitle={pageTitle} />;
     } 
-  }
-
-  const handleClick = () => {
-    if(sideBarView === true) toggleSidebar();
   }
 
   return (
     <>
-      <div className="Page" onClick={handleClick}>
-        <div className="Page-title">
-          <h1>{pageTitle}</h1>
-        </div>
+      <div className={`Page ${darkTheme && 'dark'}`}>
         <div className="Page-body">
           {pageRender(pageName)}
         </div>
       </div>
-      {pageName === "home" ? <Footer /> : false}
+      {pageName === "home" && <Footer darkTheme={darkTheme} />}
     </>
   )
 }

@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import Page from './Page';
 import SideBar from './SideBar';
 // Hooks
+import useMedia from '../hooks/useMedia';
 import useToggle from '../hooks/useToggle';
 // Utilities
 import combinedLists from '../utilities/combinedLists';
@@ -13,38 +14,40 @@ import combinedLists from '../utilities/combinedLists';
 function Routes(props) {
   const { linkNames } = props;
   const [ activeLink, setActiveLink ] = useState(0); 
-  const [ sideBarView, toggleSidebar ] = useToggle(false);        // toggle whether sidebar is active or not
-  const [ optionsView, toggleOptionsMenu ] = useToggle(false);       // display links or options
-  const [ lightTheme, setLightTheme ] = useToggle(true);         // light/dark mode
-  const [ colorBlindMode, setColorBlindMode ] = useToggle(false); // colorblind mode
-  const [ viewMode, setViewMode ] = useToggle(true);             // chem OR dev mode toggles resume style and skill icons
+  // sidebar visable hook
+  const [ sideBarView, toggleSidebar ] = useToggle(true);                    
+  // light/dark mode hook
+  const [ darkTheme, setDarkTheme ] = useToggle(true);                  
+
+  const screenSize = useMedia(
+    ['(max-width: 575.98px)','(max-width: 767.98px)','(max-width: 991.98px)','(max-width: 1199.98px)' ],
+    [576,768,992,1200],
+    '>1200px'
+  );
 
   // @DESC sets activeLink in Navbar
   const changeActive = index => {
     setActiveLink(index);
   }
 
-  const combinedOptionsMenu = [
-    {name: "Light/Dark Theme", controlValue: lightTheme, controlSwitch: setLightTheme, id: "toggleLightDark"}, 
-    {name: "Colorblind Mode", controlValue: colorBlindMode, controlSwitch: setColorBlindMode, id: "toggleColorblind"}, 
-    {name: "Chem/Dev Mode", controlValue: viewMode, controlSwitch: setViewMode, id: "toggleChemDev"}
-  ];
-
   // Loops through requested URL and Utilities to determine what was requested
   const getPage = props => {
     let tempIndex  = 0;
-    let name = props.match.params.name;
+    let pageName = props.match.params.name;
+    console.log(pageName);
     let currentPage = combinedLists.find(
-      page => page.type.toLowerCase() === name.toLowerCase()
+      page => page.type.toLowerCase() === pageName.toLowerCase()
     );
     /** If requested name exists (currentPage), find the index in the list link to apply the ActiveLink className and formatting
      *  Else the link does not exist and should be set to 'home' or 0
      */
-    tempIndex = currentPage ? linkNames.findIndex(item => item === name) : 0;
+    tempIndex = currentPage ? linkNames.findIndex(item => item === pageName) : 0;
     setActiveLink(tempIndex);
 
     if(currentPage) {
-      return <Page {...props} pageInfo={currentPage} pageName={name} toggleSidebar={toggleSidebar} />;
+      return <Page {...props} darkTheme={darkTheme} pageInfo={currentPage} pageName={pageName} />;
+    } else if(pageName === 'home') {
+        return <Page {...props} darkTheme={darkTheme} pageInfo={currentPage} pageName={pageName} />;
     } else {
       return <Redirect to="/home" />;
     }
@@ -52,21 +55,29 @@ function Routes(props) {
 
   return (
     <>
-      <Navbar activeLink={activeLink} changeActive={changeActive} linkNames={linkNames} toggleSidebar={toggleSidebar} sideBarView={sideBarView} />
-      <SideBar combinedOptionsMenu={combinedOptionsMenu} linkNames={linkNames} optionsView={optionsView} sideBarView={sideBarView} toggleSidebar={toggleSidebar} toggleOptionsMenu={toggleOptionsMenu} />
+      <Navbar 
+        activeLink={activeLink} 
+        changeActive={changeActive} 
+        darkTheme={darkTheme} 
+        linkNames={linkNames} 
+        toggleSidebar={toggleSidebar} 
+        sideBarView={sideBarView}
+        screenSize={screenSize} 
+      />
+      <SideBar 
+        darkTheme={darkTheme} 
+        linkNames={linkNames} 
+        screenSize={screenSize} 
+        sideBarView={sideBarView} 
+        toggleSidebar={toggleSidebar} 
+        setDarkTheme={setDarkTheme}
+      />
       <Switch>
         <Route 
           exact 
-          path="/home" 
-          render={routeProps => (
-            <Page 
-              {...props} 
-              pageName="home" 
-              toggleSidebar={toggleSidebar} 
-              sideBarView={sideBarView} 
-            />)} 
+          path="/:name" 
+          component={getPage} 
         />
-        <Route exact path="/:name" component={getPage} />
         <Redirect to="/home" />
       </Switch>
     </>
