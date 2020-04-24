@@ -1,17 +1,10 @@
 .CardSelector {
-  width: 100%;
+  width: 100vw;
   height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
   overflow: scroll;
   box-sizing: border-box;
-  padding: 2rem 2rem 0 2rem;
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (max-width: 768px) {
-  .CardSelector {
-    grid-template-columns: 1fr;
-    margin: auto 1rem;
-  }
+  padding: 1rem 1rem 0 1rem;
 }

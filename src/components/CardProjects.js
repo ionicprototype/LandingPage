@@ -21,21 +21,20 @@ function CardProjects(props) {
       <div className={`CardProjects-FlipBody ${flip}`}>
         <div className="CardProjects-Front">
           <img className="CardProjects-Image" src={`./images/backgrounds/landscape.jpg`} alt="HTML5"/>
-          <div>Made With:</div>
+        </div>
+        <div className="CardProjects-Back">
+          <div className="Back-Description">
+            <p>{cardInfo.description}</p>
+            <div></div>
+            <div>Made With:</div>
             <div className="CardProjects-MadeWith">
-            {cardInfo.projectTools.map(tool => (
-              <img className="CardProjects-MadeWithIcon" key={uuidv4()} src={tool.toolIcon} alt={tool.toolName} />
-            ))}
-            </div>
-          </div>
-          <div className="CardProjects-Back">
-            <div className="Back-Description">
-              <p>{cardInfo.description}</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+              {cardInfo.projectTools.map(tool => (
+                <img className="CardProjects-MadeWithIcon" key={uuidv4()} src={tool.toolIcon} alt={tool.toolName} />
+              ))}
             </div>
           </div>
         </div>
+      </div>
       <div className="CardProjects-Footer">
         <a href={cardInfo.projectLink}><i className="CardProjects-FooterIcon fas fa-link"/></a>
         <a href={cardInfo.gitHubLink}><i className="CardProjects-FooterIcon fab fa-github-alt"/></a>

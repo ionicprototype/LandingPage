@@ -34,29 +34,6 @@ const projectList = [
         toolIcon: "./images/icons/heroku_icon.png"
       }
     ]
-  },
-  {
-    projectName: "Color Wheel",
-    description: "Paletton Clone build with React",
-    projectLink: "http://www.cartwheelcoffee-fbg.com",
-    gitHubLink: "https://github.com/ionicprototype/cartwheelcoffeefbg_demo",
-    projectTools: [
-      {
-        toolName: "React.js",
-        toolIcon: "./images/icons/react_icon.png"
-      }
-    ]
-  },
-  {
-    projectName: "Shopping List",
-    projectLink: "http://www.cartwheelcoffee-fbg.com",
-    gitHubLink: "https://github.com/ionicprototype/cartwheelcoffeefbg_demo",
-    projectTools: [
-      {
-        toolName: "React.js",
-        toolIcon: "./images/icons/react_icon.png"
-      }
-    ]
   }
 ]
 

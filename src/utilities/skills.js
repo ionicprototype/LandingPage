@@ -80,23 +80,23 @@ const skillList = [
       {
         name: "MongoDB",
         URL: "./images/icons/mongoDB.png"
-      },
-      {
-        name: "Git",
-        URL: "./images/icons/git_icon.png"
-      }       
+      }    
     ]
   },
   {
     type: "Other",
     skills: [
       {
-        name: "Figma",
-        URL: "./images/icons/figma_icon.png"
-      },
+        name: "Git",
+        URL: "./images/icons/git_icon.png"
+      },   
       {
         name: "GitHub",
         URL: "./images/icons/github_icon.png"
+      },
+      {
+        name: "Figma",
+        URL: "./images/icons/figma_icon.png"
       },
       {
         name: "Heroku",

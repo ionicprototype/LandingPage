@@ -19,37 +19,37 @@ function CardSelector(props) {
       return (
         <>
           {pageInfo[0].map(info => (
-          <div key={uuidv4()} className={`Card ${darkTheme && 'dark'}`} style={{ width: "90%", height: "80%" }}>
+          <div key={uuidv4()} className={`Card ${darkTheme && 'dark'}`}>
+            <div className="Card-Title">{info.title}</div>
             <div className="Card-Container">
-              <div className="Card-Title">{info.title}</div>
               <CardExperience cardInfo={info} />
             </div>
           </div>
           ))}
           {pageInfo[1].map(info => (
-          <div key={uuidv4()} className={`Card ${darkTheme && 'dark'}`} style={{ width: "90%", height: "80%" }}>
-            <div className="Card-Container">
+            <div key={uuidv4()} className={`Card ${darkTheme && 'dark'}`}>
               <div className="Card-Title">{info.institution}</div>
-              <CardEducation cardInfo={info} />
+              <div className="Card-Container">
+                <CardEducation cardInfo={info} />
+              </div>
             </div>
-          </div>
           ))}
         </>
         );
     } else if(cardView === "projects") {
       return pageInfo.map(info => (
-        <div key={uuidv4()} className={`Card ${darkTheme && 'dark'}`} style={{width: "80%", height: "80%" }}>
+        <div key={uuidv4()} className={`Card ${darkTheme && 'dark'}`}>
+          <div className="Card-Title">{info.projectName}</div>
           <div className="Card-Container">
-            <div className="Card-Title">{info.projectName}</div>
             <CardProjects cardInfo={info} />
           </div>
         </div>
       ));
     } else if(cardView === "skills") {
       return pageInfo.map(info => (
-        <div key={uuidv4()} className={`Card ${darkTheme && 'dark'}`} style={{ width: "80%", height: "75%" }}>
+        <div key={uuidv4()} className={`Card ${darkTheme && 'dark'}`}>
+          <div className="Card-Title">{info.type}</div>
           <div className="Card-Container">
-            <div className="Card-Title">{info.type}</div>
             <CardSkills cardInfo={info} />
           </div>
         </div>

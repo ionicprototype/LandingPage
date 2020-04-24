@@ -26,7 +26,7 @@ function SideBar(props) {
     <div className="SideBar" style={{ left: `${sideBarView ? "0%" : "-100%"}`}}>
       <div className={`SideBar-Docked ${darkTheme && 'dark'}`} style={{ flex: `1 1 ${viewWidth}vw`}}>
         <div className="SideBar-Command">
-          <button className="Sidebar-Close" onClick={toggleSidebar}><i class={`fas fa-times-circle ${darkTheme && 'dark'}`}></i></button>
+          <button className="Sidebar-Close" onClick={toggleSidebar}><i className={`fas fa-times-circle ${darkTheme && 'dark'}`}></i></button>
           <div className={`SideBar-Settings SideBar-toggleSwitch ${darkTheme && 'dark'}`}>
             <input type="checkbox" className={`toggleSwitch ${darkTheme && 'dark'}`} id="toggle" checked={darkTheme} onChange={setDarkTheme} />  
             <label className={`switch ${darkTheme && 'dark'}`} htmlFor="toggle" />

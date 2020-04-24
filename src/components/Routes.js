@@ -15,10 +15,10 @@ function Routes(props) {
   const { linkNames } = props;
   const [ activeLink, setActiveLink ] = useState(0); 
   // sidebar visable hook
-  const [ sideBarView, toggleSidebar ] = useToggle(true);                    
+  const [ sideBarView, toggleSidebar ] = useToggle(false);                    
   // light/dark mode hook
   const [ darkTheme, setDarkTheme ] = useToggle(true);                  
-
+  // screen size query hook
   const screenSize = useMedia(
     ['(max-width: 575.98px)','(max-width: 767.98px)','(max-width: 991.98px)','(max-width: 1199.98px)' ],
     [576,768,992,1200],
