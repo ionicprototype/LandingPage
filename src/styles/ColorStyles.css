@@ -1,5 +1,5 @@
 /**
-* CSS that controls color/dark mode
+* CSS that controls color for light/dark mode
 */
 
 /*  
@@ -88,6 +88,15 @@ hr.dark {
 }
 .CardProjects-FooterIcon.dark {
   color: #393939;
+}
+/*
+ * CSS for ContentSelector elements
+ */
+.electron {
+  background: radial-gradient(circle at 65% 30%, #D3BB88 3%, #B38D42 60%)  
+}
+.electron.dark {
+  background: radial-gradient(circle at 65% 50%, #BB86FC 3%, darkblue 60%);
 }
 
 /* 

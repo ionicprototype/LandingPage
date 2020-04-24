@@ -18,8 +18,8 @@ function addKeyFrames(shapeObj) {
 
       const customSheet = contentStyle(idx);
       const xDirec = ellipse.startValue[0] < 50 ? true : false;
-      const framesHorz = `to { transform: translateX(${xDirec ? ellipse.lengthValue[0] * 2 : -ellipse.lengthValue[0] * 2}vw); };`;
-      const framesVert = `0% { 
+      const framesHorzontal = `to { transform: translateX(${xDirec ? ellipse.lengthValue[0] * 2 : -ellipse.lengthValue[0] * 2}vw); };`;
+      const framesVertical = `0% { 
         transform: translateY(0px); 
         animation-timing-function: cubic-bezier(0,0,0,1); 
       } 
@@ -40,12 +40,10 @@ function addKeyFrames(shapeObj) {
         animation-timing-function: cubic-bezier(1,0,1,1); 
       }`;
 
-      customSheet.insertRule(`@keyframes ${ellipse.animationName[0]} { ${framesHorz} }`, 0);
-      customSheet.insertRule(`@keyframes ${ellipse.animationName[1]} { ${framesVert} }`, 0);
-      return false;
+      customSheet.insertRule(`@keyframes ${ellipse.animationName[0]} { ${framesHorzontal} }`, 0);
+      customSheet.insertRule(`@keyframes ${ellipse.animationName[1]} { ${framesVertical} }`, 0);
+      return true;
     });
-  } else {
-    //if they exist, do nothing
   }
   
 }

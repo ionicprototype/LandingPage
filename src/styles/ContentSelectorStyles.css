@@ -24,3 +24,18 @@
   width: auto;
   position: absolute;
 }
+
+.electron {
+  position: relative;
+  z-index: 0;
+  width: 2vw;
+  height: 2vw;
+  border-radius: 50%;
+  opacity: 50%;
+}
+
+@keyframes elecOrbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
