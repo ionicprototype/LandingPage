@@ -34,7 +34,6 @@ function Routes(props) {
   const getPage = props => {
     let tempIndex  = 0;
     let pageName = props.match.params.name;
-    console.log(pageName);
     let currentPage = combinedLists.find(
       page => page.type.toLowerCase() === pageName.toLowerCase()
     );

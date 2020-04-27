@@ -34,9 +34,9 @@ function ContentSelector(props) {
   return (
       <div className="ContentSelector" onClick={toggleOrbit}>
         <div className="orbitWrapper">
-          <h2 style={{ position: "absolute", top: "25vh", left: "30vw", zIndex: "10" }}>1/2 Chemist</h2>
-          <h2 style={{ position: "absolute", top: "35vh", left: "55vw", zIndex: "10" }}>All Dad</h2>
-          <h2 style={{ position: "absolute", top: "55vh", left: "35vw", zIndex: "10" }}>1/2 Dev</h2>
+          <h2 style={{ position: "absolute", top: "25vh", left: "15vw", zIndex: "10" }}>1/2 Chemist</h2>
+          <h2 style={{ position: "absolute", top: "40vh", left: "55vw", zIndex: "10" }}>All Dad</h2>
+          <h2 style={{ position: "absolute", top: "55vh", left: "25vw", zIndex: "10" }}>1/2 Dev</h2>
           {ellipseMap}
         </div>
       </div>
