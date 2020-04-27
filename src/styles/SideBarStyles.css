@@ -7,6 +7,9 @@
   width: 100vw;
   z-index: 100;
   transition: ease-in-out 500ms;
+  -webkit-transition: ease-in-out 500ms;
+  -moz-transition: ease-in-out 500ms;
+  -o-transition: ease-in-out 500ms;
   display: flex;
   flex-flow: row nowrap;
 }
@@ -55,7 +58,10 @@
   height: 5vh;
   text-align: center;
   font-size: 2em;
-  transition: 500ms ease-in-out;
+  transition: ease-in-out 500ms;
+  -webkit-transition: ease-in-out 500ms;
+  -moz-transition: ease-in-out 500ms;
+  -o-transition: ease-in-out 500ms;
 }
 
 .Sidebar-Close {
@@ -92,7 +98,10 @@
   width: 5vw;
   height: 5vw;
   border-radius: 20px;
-  transition: all 0.5s;
+  transition: all 500ms;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -o-transition: all 500ms;
 }
 
 input[type="checkbox"]:checked + label:before {
@@ -105,7 +114,11 @@ input[type="checkbox"]:checked + label:before {
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  transition: all 0.5s;
+  -moz-osx-font-smoothing: antialiased;
+  transition: all 500ms;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -o-transition: all 500ms;
 }
 
 input[type="checkbox"] + label:before {
@@ -118,7 +131,11 @@ input[type="checkbox"] + label:before {
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  transition: all 0.5s;
+  -moz-osx-font-smoothing: antialiased;
+  transition: all 500ms;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -o-transition: all 500ms;
 }
 
 

@@ -159,12 +159,7 @@ hr.dark {
 /*  
  * CSS for Footer elements
  */
-.Footer-Contact {
-  background: linear-gradient(0deg, transparent 0% 20%, #3B8170 20% 80%, transparent 80%);
-}
-.Footer-Contact.dark {
-  background: linear-gradient(0deg, transparent 0% 20%, #393939 20% 80%, transparent 80%);
-}
+
 .contactIcon {
   background-color: #004B4B;
   color: aliceblue;
