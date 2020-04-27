@@ -107,6 +107,7 @@
   height: 80%;
   position: absolute;
   backface-visibility: hidden;
+  filter: brightness(50%);
 }
 
 .CardProjects-Image {

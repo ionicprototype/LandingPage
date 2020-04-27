@@ -20,12 +20,11 @@ function CardProjects(props) {
     <div className="CardProjects">
       <div className={`CardProjects-FlipBody ${flip}`}>
         <div className="CardProjects-Front">
-          <img className="CardProjects-Image" src={`./images/backgrounds/landscape.jpg`} alt="HTML5"/>
+          <img className="CardProjects-Image" src={cardInfo.imageInfo.link} alt={cardInfo.imageInfo.alt}/>
         </div>
         <div className="CardProjects-Back">
           <div className="Back-Description">
             <p>{cardInfo.description}</p>
-            <div></div>
             <div>Made With:</div>
             <div className="CardProjects-MadeWith">
               {cardInfo.projectTools.map(tool => (

@@ -4,6 +4,10 @@ const projectList = [
     description: "Landing Page for a Central Texas coffee vendor",
     projectLink: "http://www.cartwheelcoffee-fbg.com",
     gitHubLink: "https://github.com/ionicprototype/cartwheelcoffeefbg_demo",
+    imageInfo: {
+        link: "./images/backgrounds/cartwheelcoffee_fbg_banner.png",
+        alt: "Cartwheel Coffee FBG"
+    },
     projectTools: [
       {
         toolName: "ejs",
